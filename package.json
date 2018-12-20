@@ -1,5 +1,5 @@
 {
-  "name": "quitfacebook",
+  "name": "quit-facebook",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@feathersjs/client": "^3.7.6",
+    "@feathersjs/feathers": "^3.3.0",
+    "@feathersjs/socketio-client": "^1.2.0",
+    "feathers-vuex": "^1.6.2",
+    "socket.io-client": "^2.2.0",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.5.17",
     "vue-clipboard2": "^0.2.1",

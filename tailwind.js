@@ -37,9 +37,9 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 | for prototyping, but don't hesitate to change them for your project. You
 | own these colors, nothing will break if you change everything about them.
 |
-| We've used literal color names ("red", "blue", etc.) for the default
-| palette, but if you'd rather use functional names like "primary" and
-| "secondary", or even a numeric scale like "100" and "200", go for it.
+| We've used literal color names ('red', 'blue', etc.) for the default
+| palette, but if you'd rather use functional names like 'primary' and
+| 'secondary', or even a numeric scale like '100' and '200', go for it.
 |
 */
 
@@ -130,13 +130,12 @@ let colors = {
 }
 
 module.exports = {
-
   /*
   |-----------------------------------------------------------------------------
   | Colors                                  https://tailwindcss.com/docs/colors
   |-----------------------------------------------------------------------------
   |
-  | The color palette defined above is also assigned to the "colors" key of
+  | The color palette defined above is also assigned to the 'colors' key of
   | your Tailwind config. This makes it easy to access them in your CSS
   | using Tailwind's config helper. For example:
   |
@@ -146,7 +145,6 @@ module.exports = {
 
   colors: colors,
 
-
   /*
   |-----------------------------------------------------------------------------
   | Screens                      https://tailwindcss.com/docs/responsive-design
@@ -154,7 +152,7 @@ module.exports = {
   |
   | Screens in Tailwind are translated to CSS media queries. They define the
   | responsive breakpoints for your project. By default Tailwind takes a
-  | "mobile first" approach, where each screen size represents a minimum
+  | 'mobile first' approach, where each screen size represents a minimum
   | viewport width. Feel free to have as few or as many screens as you
   | want, naming them in whatever way you'd prefer for your project.
   |
@@ -167,12 +165,10 @@ module.exports = {
   */
 
   screens: {
-    'sm': '576px',
-    'md': '768px',
-    'lg': '992px',
-    'xl': '1200px',
+    sm: '340px',
+    md: '540px',
+    lg: '1023px'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -194,7 +190,7 @@ module.exports = {
   */
 
   fonts: {
-    'sans': [
+    sans: [
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -206,9 +202,9 @@ module.exports = {
       'Fira Sans',
       'Droid Sans',
       'Helvetica Neue',
-      'sans-serif',
+      'sans-serif'
     ],
-    'serif': [
+    serif: [
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -218,18 +214,17 @@ module.exports = {
       'Bitstream Vera Serif',
       'Liberation Serif',
       'Georgia',
-      'serif',
+      'serif'
     ],
-    'mono': [
+    mono: [
       'Menlo',
       'Monaco',
       'Consolas',
       'Liberation Mono',
       'Courier New',
-      'monospace',
-    ],
+      'monospace'
+    ]
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -241,7 +236,7 @@ module.exports = {
   | you're welcome to use a numeric scale or even something else
   | entirely.
   |
-  | By default Tailwind uses the "rem" unit type for most measurements.
+  | By default Tailwind uses the 'rem' unit type for most measurements.
   | This allows you to set a root font size which all other sizes are
   | then based on. That said, you are free to use whatever units you
   | prefer, be it rems, ems, pixels or other.
@@ -252,17 +247,16 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '.75rem',     // 12px
-    'sm': '.875rem',    // 14px
-    'base': '1rem',     // 16px
-    'lg': '1.125rem',   // 18px
-    'xl': '1.25rem',    // 20px
-    '2xl': '1.5rem',    // 24px
-    '3xl': '1.875rem',  // 30px
-    '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
+    xs: '.75rem', // 12px
+    sm: '.875rem', // 14px
+    base: '1rem', // 16px
+    lg: '1.125rem', // 18px
+    xl: '1.25rem', // 20px
+    '2xl': '1.5rem', // 24px
+    '3xl': '1.875rem', // 30px
+    '4xl': '2.25rem', // 36px
+    '5xl': '3rem' // 48px
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -280,17 +274,16 @@ module.exports = {
   */
 
   fontWeights: {
-    'hairline': 100,
-    'thin': 200,
-    'light': 300,
-    'normal': 400,
-    'medium': 500,
-    'semibold': 600,
-    'bold': 700,
-    'extrabold': 800,
-    'black': 900,
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -306,12 +299,11 @@ module.exports = {
   */
 
   leading: {
-    'none': 1,
-    'tight': 1.25,
-    'normal': 1.5,
-    'loose': 2,
+    none: 1,
+    tight: 1.25,
+    normal: 1.5,
+    loose: 2
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -327,11 +319,10 @@ module.exports = {
   */
 
   tracking: {
-    'tight': '-0.05em',
-    'normal': '0',
-    'wide': '0.05em',
+    tight: '-0.05em',
+    normal: '0',
+    wide: '0.05em'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -349,7 +340,6 @@ module.exports = {
 
   textColors: colors,
 
-
   /*
   |-----------------------------------------------------------------------------
   | Background colors             https://tailwindcss.com/docs/background-color
@@ -366,7 +356,6 @@ module.exports = {
 
   backgroundColors: colors,
 
-
   /*
   |-----------------------------------------------------------------------------
   | Background sizes               https://tailwindcss.com/docs/background-size
@@ -382,11 +371,10 @@ module.exports = {
   */
 
   backgroundSize: {
-    'auto': 'auto',
-    'cover': 'cover',
-    'contain': 'contain',
+    auto: 'auto',
+    cover: 'cover',
+    contain: 'contain'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -394,7 +382,7 @@ module.exports = {
   |-----------------------------------------------------------------------------
   |
   | Here is where you define your border widths. Take note that border
-  | widths require a special "default" value set as well. This is the
+  | widths require a special 'default' value set as well. This is the
   | width that will be used when you do not specify a border width.
   |
   | Class name: .border{-side?}{-width?}
@@ -407,9 +395,8 @@ module.exports = {
     '0': '0',
     '2': '2px',
     '4': '4px',
-    '8': '8px',
+    '8': '8px'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -420,7 +407,7 @@ module.exports = {
   | color palette we defined above, however you're welcome to set these
   | independently if that makes sense for your project.
   |
-  | Take note that border colors require a special "default" value set
+  | Take note that border colors require a special 'default' value set
   | as well. This is the color that will be used when you do not
   | specify a border color.
   |
@@ -430,7 +417,6 @@ module.exports = {
   */
 
   borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -450,13 +436,12 @@ module.exports = {
   */
 
   borderRadius: {
-    'none': '0',
-    'sm': '.125rem',
+    none: '0',
+    sm: '.125rem',
     default: '.25rem',
-    'lg': '.5rem',
-    'full': '9999px',
+    lg: '.5rem',
+    full: '9999px'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -480,8 +465,8 @@ module.exports = {
   */
 
   width: {
-    'auto': 'auto',
-    'px': '1px',
+    auto: 'auto',
+    px: '1px',
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '0.75rem',
@@ -507,10 +492,9 @@ module.exports = {
     '4/5': '80%',
     '1/6': '16.66667%',
     '5/6': '83.33333%',
-    'full': '100%',
-    'screen': '100vw',
+    full: '100%',
+    screen: '100vw'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -529,8 +513,8 @@ module.exports = {
   */
 
   height: {
-    'auto': 'auto',
-    'px': '1px',
+    auto: 'auto',
+    px: '1px',
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '0.75rem',
@@ -545,10 +529,9 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
-    'full': '100%',
-    'screen': '100vh',
+    full: '100%',
+    screen: '100vh'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -567,9 +550,8 @@ module.exports = {
 
   minWidth: {
     '0': '0',
-    'full': '100%',
+    full: '100%'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -588,10 +570,9 @@ module.exports = {
 
   minHeight: {
     '0': '0',
-    'full': '100%',
-    'screen': '100vh',
+    full: '100%',
+    screen: '100vh'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -600,7 +581,7 @@ module.exports = {
   |
   | Here is where you define your maximum width utility sizes. These can
   | be percentage based, pixels, rems, or any other units. By default
-  | we provide a sensible rem based scale and a "full width" size,
+  | we provide a sensible rem based scale and a 'full width' size,
   | which is basically a reset utility. You can, of course,
   | modify these values as needed.
   |
@@ -610,18 +591,17 @@ module.exports = {
   */
 
   maxWidth: {
-    'xs': '20rem',
-    'sm': '30rem',
-    'md': '40rem',
-    'lg': '50rem',
-    'xl': '60rem',
+    xs: '20rem',
+    sm: '30rem',
+    md: '40rem',
+    lg: '50rem',
+    xl: '60rem',
     '2xl': '70rem',
     '3xl': '80rem',
     '4xl': '90rem',
     '5xl': '100rem',
-    'full': '100%',
+    full: '100%'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -639,10 +619,9 @@ module.exports = {
   */
 
   maxHeight: {
-    'full': '100%',
-    'screen': '100vh',
+    full: '100%',
+    screen: '100vh'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -652,7 +631,7 @@ module.exports = {
   | Here is where you define your padding utility sizes. These can be
   | percentage based, pixels, rems, or any other units. By default we
   | provide a sensible rem based numeric scale plus a couple other
-  | common use-cases like "1px". You can, of course, modify these
+  | common use-cases like '1px'. You can, of course, modify these
   | values as needed.
   |
   | Class name: .p{side?}-{size}
@@ -661,7 +640,7 @@ module.exports = {
   */
 
   padding: {
-    'px': '1px',
+    px: '1px',
     '0': '0',
     '1': '0.25rem',
     '2': '0.5rem',
@@ -675,9 +654,8 @@ module.exports = {
     '16': '4rem',
     '20': '5rem',
     '24': '6rem',
-    '32': '8rem',
+    '32': '8rem'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -687,7 +665,7 @@ module.exports = {
   | Here is where you define your margin utility sizes. These can be
   | percentage based, pixels, rems, or any other units. By default we
   | provide a sensible rem based numeric scale plus a couple other
-  | common use-cases like "1px". You can, of course, modify these
+  | common use-cases like '1px'. You can, of course, modify these
   | values as needed.
   |
   | Class name: .m{side?}-{size}
@@ -696,8 +674,8 @@ module.exports = {
   */
 
   margin: {
-    'auto': 'auto',
-    'px': '1px',
+    auto: 'auto',
+    px: '1px',
     '0': '0',
     '1': '0.25rem',
     '2': '0.5rem',
@@ -711,9 +689,8 @@ module.exports = {
     '16': '4rem',
     '20': '5rem',
     '24': '6rem',
-    '32': '8rem',
+    '32': '8rem'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -732,7 +709,7 @@ module.exports = {
   */
 
   negativeMargin: {
-    'px': '1px',
+    px: '1px',
     '0': '0',
     '1': '0.25rem',
     '2': '0.5rem',
@@ -746,9 +723,8 @@ module.exports = {
     '16': '4rem',
     '20': '5rem',
     '24': '6rem',
-    '32': '8rem',
+    '32': '8rem'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -769,13 +745,12 @@ module.exports = {
 
   shadows: {
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-    'outline': '0 0 0 3px rgba(52,144,220,0.5)',
-    'none': 'none',
+    md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+    lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+    inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    outline: '0 0 0 3px rgba(52,144,220,0.5)',
+    none: 'none'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -792,15 +767,14 @@ module.exports = {
   */
 
   zIndex: {
-    'auto': 'auto',
+    auto: 'auto',
     '0': 0,
     '10': 10,
     '20': 20,
     '30': 30,
     '40': 40,
-    '50': 50,
+    '50': 50
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -821,9 +795,8 @@ module.exports = {
     '25': '.25',
     '50': '.5',
     '75': '.75',
-    '100': '1',
+    '100': '1'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -841,9 +814,8 @@ module.exports = {
   */
 
   svgFill: {
-    'current': 'currentColor',
+    current: 'currentColor'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -861,9 +833,8 @@ module.exports = {
   */
 
   svgStroke: {
-    'current': 'currentColor',
+    current: 'currentColor'
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -935,9 +906,8 @@ module.exports = {
     visibility: ['responsive'],
     whitespace: ['responsive'],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    zIndex: ['responsive']
   },
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -957,9 +927,8 @@ module.exports = {
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',
-    }),
+    })
   ],
-
 
   /*
   |-----------------------------------------------------------------------------
@@ -974,7 +943,6 @@ module.exports = {
   options: {
     prefix: '',
     important: false,
-    separator: ':',
-  },
-
-}
+    separator: ':'
+  }
+};

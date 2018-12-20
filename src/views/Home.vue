@@ -1,12 +1,40 @@
 <script>
+import { mapState, mapActions, mapGetters } from 'vuex'
+import AddProduct from '@/components/AddProduct'
+
 export default {
   name: 'home',
+
+  components: {
+    AddProduct
+  },
 
   data: () => ({
     isJustCopied: false
   }),
 
+  computed: {
+    ...mapGetters('categories', { getCategories: 'find' }),
+    categories() {
+      return this.getCategories({
+        query: {
+          $limit: 99
+        }
+      }).data
+    }
+  },
+
+  created() {
+    this.findCategories({
+      query: {
+        $limit: 99
+      }
+    })
+  },
+
   methods: {
+    ...mapActions('categories', { findCategories: 'find' }),
+    ...mapActions('global', ['showAddProduct', 'hideAddProduct']),
     copy() {
       this.$copyText('https://quitfacebook.org/').then(function (e) {
         console.log(e)
@@ -25,35 +53,72 @@ export default {
 </script>
 
 <template>
-  <div class="home my-6">
-    <div class="flex flex-col content-center items-center">
-      <div class="flex flex-col items-center select-none">
+  <div class="home my-6 container mx-auto">
+    <add-product
+      :categories="categories"
+    />
+    <div class="flex flex-col">
+      <div class="flex select-none sm:flex-col md:flex-row">
         <img
-          class="w-24 h-24 mr-2"
+          class="sm:w-24 sm:w-24 md:w-32 md:h-32 mr-2"
           alt="Quit Facebook Logo"
           src="../assets/logo.png"
         >
-        <h1 class="text-5xl text-blue-dark font-black uppercase text-center">Quit Facebook</h1>
+        <h1 class="text-5xl text-blue-dark font-black uppercase">Quit <br /> Facebook</h1>
       </div>
-      <h3 class="text-base mt-6 mb-12 text-black text-center">You can quit Facebook easier by using these crowd-sourced alternatives!</h3>
-      <div class="flex flex-col content-center items-center">
+      <h3 class="text-lg mt-6 mx-1 text-black">You can quit Facebook easier by using these crowd-sourced alternatives!</h3>
+      <div class="my-8 flex sm:flex-col md:flex-row lg:flex-row ">
         <a
-          class="uppercase my-2 bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-4 px-6 border border-grey rounded shadow cursor-pointer"
+          class="mx-1 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-3 px-4 border border-grey rounded shadow cursor-pointer"
           @click="copy"
-          v-tooltip="{
+          v-tooltip.bottom="{
             content: 'Copied to clipboard!',
             show: isJustCopied,
             trigger: 'manual'
           }"
         >
-          <span>🔗 Share with a friend</span>
+          <span>🔗 Share this</span>
         </a>
         <a
-          class="uppercase my-2 bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-4 px-6 border border-grey rounded shadow cursor-pointer"
+          class="mx-1 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-3 px-4 border border-grey rounded shadow cursor-pointer"
+          @click="showAddProduct"
+        >
+          <span>🤩 Add alternative</span>
+        </a>
+        <!-- <a
+          class="mx-2 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-3 px-4 border border-grey rounded shadow cursor-pointer"
           href="https://producthunt.com/quitfacebook"
           target="_blank"
         >
-          <span>😻 We're is on Product Hunt</span>
+          <span>😻 Product Hunted</span>
+        </a> -->
+      </div>
+    </div>
+    <div
+      v-show="categories.length > 0"
+      v-for="category in categories"
+      :key="category._id"
+      class="flex mb-4 sm:flex-col lg:flex-row"
+    >
+      <div class="sm:w-full md:w-full lg:w-1/4 bg-green h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
+        <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
+      </div>
+      <div class="sm:w-full md:w-full lg:w-3/4 lg:ml-6">
+        <a
+          href="https://spotify.com"
+          target="_blank"
+          class="mb-4 py-4 rounded content-center items-center flex text-lg align-middle hover:underline pl-2 text-blue-darker bg-grey-lightest hover:bg-grey-lighter"
+        >
+          <img class="w-8 h-8" src="//logo.clearbit.com/spotify.com?size=32">
+          <span class="pl-2">Spotify</span>
+        </a>
+        <a
+          href="https://spotify.com"
+          target="_blank"
+          class="py-4 rounded content-center items-center flex text-lg align-middle my-auto hover:underline pl-2 text-blue-darker bg-grey-lightest hover:bg-grey-lighter"
+        >
+          <img class="w-8 h-8" src="//logo.clearbit.com/spotify.com?size=32">
+          <span class="pl-2">Spotify</span>
         </a>
       </div>
     </div>
