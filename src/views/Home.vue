@@ -100,13 +100,7 @@ export default {
         </div>
       </div>
       <h3 class="text-lg mt-8 mb-10  mx-1 font-normal text-grey-darkest leading-normal">
-        <a target="_blank"
-          class="text-blue-dark font-bold hover:underline cursor-pointer"
-          href="https://twitter.com/hashtag/deletefacebook"
-        >
-          #DeleteFacebook
-        </a>
-        is now easier by using these products instead! <br />Feel free
+        Getting rid of Facebook is now easier, check-out these alternative products! <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           @click="copy"
@@ -115,12 +109,11 @@ export default {
             show: isJustCopied,
             trigger: 'manual'
           }"
-        >Share it with a friend 🔗</a>
-        or
+        >Share it with a friend 🔗</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           @click="showAddProduct"
-        >Add an alternative 🤩</a> <br /> Also,
+        >Add an alternative 🤩</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           href="https://www.producthunt.com/posts/delete-facebook-wiki"
