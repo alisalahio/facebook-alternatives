@@ -77,9 +77,9 @@ export default {
           >
           <h1 class="text-3xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col items-end content-end">
           <a
-            class="mx-1 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-2 border border-grey rounded shadow cursor-pointer"
+            class="uppercase text-blue-dark font-semibold cursor-pointer hover:underline mb-4"
             @click="copy"
             v-tooltip.bottom="{
               content: 'Copied to clipboard!',
@@ -90,15 +90,15 @@ export default {
             <span>🔗 Share this</span>
           </a>
           <a
-            class="mx-1 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-2 border border-grey rounded shadow cursor-pointer"
+            class="uppercase text-blue-dark font-semibold cursor-pointer hover:underline"
             @click="showAddProduct"
           >
-            <span>🤩 Add alternative</span>
+            <span>🤩 Add product</span>
           </a>
         </div>
       </div>
 
-      <h3 class="text-lg mt-8 mb-12 mx-1 text-black">You can <a target="_blank" class="text-blue-dark" href="https://twitter.com/hashtag/deletefacebook">#DeleteFacebook</a> easier by using these crowd-sourced alternatives!</h3>
+      <h3 class="text-xl mt-8 mb-12 mx-1 font-normal text-grey-darkest">You can <a target="_blank" class="text-blue-dark font-bold hover:underline" href="https://twitter.com/hashtag/deletefacebook">#DeleteFacebook</a> easier by using these crowd-sourced alternatives!</h3>
     </div>
     <div
       v-show="categories.length > 0"
@@ -109,7 +109,7 @@ export default {
       <div class="sm:w-full md:w-full lg:w-1/3 bg-blue-dark h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
         <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
       </div>
-      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6 mt-4 mb-2">
+      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6 sm:mt-4 md:mt-0 mb-2">
         <a
           v-show="category.products.data.length > 0"
           v-for="product of category.products.data"

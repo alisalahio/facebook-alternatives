@@ -80,7 +80,7 @@ export default {
     @close="hideAddProduct"
   >
     <div slot="body">
-      <h2 class="text-center text-blue-dark font-bold uppercase mb-12">Add Alternative</h2>
+      <h2 class="text-center text-blue-dark font-bold uppercase mb-12">Add Product</h2>
       <form
         v-on:submit.prevent="submit"
         class="w-full"
