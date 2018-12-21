@@ -100,24 +100,24 @@ export default {
         </div>
       </div>
       <h3 class="text-lg mt-8 mb-10  mx-1 font-normal text-grey-darkest leading-normal">
-        Getting rid of Facebook is now easier, check-out these alternative products! <br />
+        Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
         <a
-          class="text-blue-dark font-bold hover:underline cursor-pointer"
+          class="text-blue-dark font-bold hover:underline cursor-pointer pt-2"
           @click="copy"
           v-tooltip.bottom="{
             content: 'Copied to clipboard!',
             show: isJustCopied,
             trigger: 'manual'
           }"
-        >Share it with a friend 🔗</a> <br />
+        >🔗 Share it with a friend</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           @click="showAddProduct"
-        >Add an alternative 🤩</a> <br />
+        >🤩 Add an alternative</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           href="https://www.producthunt.com/posts/delete-facebook-wiki"
-        >we're on Product Hunt 😻</a>
+        >😻 We're on Product Hunt!</a>
       </h3>
     </div>
     <div
