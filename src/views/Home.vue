@@ -23,7 +23,7 @@ export default {
       return this.getCategories({
         query: {
           $limit: 99,
-          $sort: 'order'
+          $sort: { order: 1 }
         }
       }).data
     }
