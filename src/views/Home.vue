@@ -101,10 +101,10 @@ export default {
       :key="category._id"
       class="flex mb-4 sm:flex-col lg:flex-row"
     >
-      <div class="sm:w-full md:w-full lg:w-1/4 bg-blue h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
+      <div class="sm:w-full md:w-full lg:w-1/3 bg-blue h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
         <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
       </div>
-      <div class="sm:w-full md:w-full lg:w-3/4 lg:ml-6">
+      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6">
         <a
           v-show="category.products.data.length > 0"
           v-for="product of category.products.data"
