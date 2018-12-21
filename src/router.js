@@ -8,12 +8,8 @@ import VueAnalytics from 'vue-analytics'
 Vue.use(Router)
 Vue.use(VueClipboard)
 Vue.use(VTooltip)
-Vue.use(VueAnalytics, {
-  id: 'UA-130691181-2',
-  Router
-})
 
-export default new Router({
+export default router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -23,4 +19,9 @@ export default new Router({
       component: Home
     }
   ]
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-130691181-2',
+  router
 })
