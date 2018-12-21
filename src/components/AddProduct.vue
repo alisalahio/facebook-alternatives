@@ -133,9 +133,9 @@ export default {
             >
           </div>
         </div>
-        <div class="md:flex md:items-center mt-6">
+        <div class="md:flex md:items-center mt-2">
           <button
-            class="bg-blue-dark hover:bg-blue focus:shadow-outline focus:outline-none text-white font-bold py-6 px-4 rounded w-full"
+            class="bg-blue-dark hover:bg-blue focus:shadow-outline focus:outline-none text-white font-bold py-4 px-4 rounded w-full"
             type="button"
             @click="submit"
           >
