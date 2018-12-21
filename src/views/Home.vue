@@ -118,7 +118,11 @@ export default {
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           @click="showAddProduct"
-        >Add an alternative 🤩</a>
+        >Add an alternative 🤩</a> <br /> Also,
+        <a
+          class="text-blue-dark font-bold hover:underline cursor-pointer"
+          href="https://www.producthunt.com/posts/delete-facebook-wiki"
+        >we're on Product Hunt 😻</a>
       </h3>
     </div>
     <div
