@@ -1,4 +1,4 @@
-
+const { disallow } = require('feathers-hooks-common');
 
 function updateVotesCount() {
   return function(hook) {
@@ -8,16 +8,15 @@ function updateVotesCount() {
   };
 }
 
-
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
-    remove: []
+    update: [disallow()],
+    patch: [disallow()],
+    remove: [disallow()]
   },
 
   after: {

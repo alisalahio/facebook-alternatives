@@ -1,4 +1,4 @@
-const { fastJoin } = require('feathers-hooks-common');
+const { fastJoin, disallow } = require('feathers-hooks-common');
 
 const categoryResolvers = {
   joins: {
@@ -14,10 +14,10 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
+    create: [disallow()],
+    update: [disallow()],
+    patch: [disallow()],
+    remove: [disallow()]
   },
 
   after: {
