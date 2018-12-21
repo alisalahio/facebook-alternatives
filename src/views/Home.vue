@@ -35,9 +35,6 @@ export default {
         $limit: 99
       }
     })
-    axios.get('https://api.ipify.org/?format=json').then(response => {
-      this.ip = response.data.ip
-    })
   },
 
   methods: {
@@ -58,7 +55,12 @@ export default {
         this.isJustCopied = false
       }, 2500)
     },
-    upvote(productId) {
+    async getIP() {
+      var response = await axios.get('https://api.ipify.org/?format=json')
+      return response.data.ip
+    },
+    async upvote(productId) {
+      this.ip = await this.getIP()
       this.createVote({
         productId: productId,
         ip: this.ip
