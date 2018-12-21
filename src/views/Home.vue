@@ -55,6 +55,15 @@ export default {
 
 <template>
   <div class="home my-6 container mx-auto">
+    <a
+      href="https://twitter.com/alollou"
+      target="_blank"
+      class="border-t border-l border-left border-grey rounded pin-b pin-r fixed flex items-center p-2 bg-white z-50"
+    >
+      <span class="text-black px-2">by </span>
+      <img class="w-6 h-6 rounded-full" src="https://pbs.twimg.com/profile_images/1073368061183516672/tcWzTTZw_400x400.jpg">
+      <span class="text-blue-dark px-2">@alollou</span>
+    </a>
     <add-product
       :categories="categories"
     />
@@ -104,7 +113,7 @@ export default {
       <div class="sm:w-full md:w-full lg:w-1/3 bg-blue h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
         <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
       </div>
-      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6">
+      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6 mt-4 mb-2">
         <a
           v-show="category.products.data.length > 0"
           v-for="product of category.products.data"
@@ -118,6 +127,20 @@ export default {
         </a>
       </div>
     </div>
+    <footer class="flex flex-col mt-8 mb-20">
+      <a
+        class="text-grey-darker no-underline hover:underline text-sm"
+        href="http://iplegalcorner.com/fair-use-of-trademark-for-comment-and-criticism/"
+      >
+        This site is non-commercial and not affiliated with any companies/products listed.
+      </a>
+      <a
+        class="text-grey-darker no-underline hover:underline mt-4 text-sm"
+        href="http://iplegalcorner.com/fair-use-of-trademark-for-comment-and-criticism/"
+      >
+        Alternatives are crowd-sourced and voted-on by site visitors.
+      </a>
+    </footer>
   </div>
 </template>
 
