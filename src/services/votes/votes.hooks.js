@@ -1,5 +1,14 @@
 
 
+function updateVotesCount() {
+  return function(hook) {
+    hook.app
+      .service('products')
+      .patch(hook.data.productId, { $inc: { votes: 1 } });
+  };
+}
+
+
 module.exports = {
   before: {
     all: [],
@@ -15,7 +24,7 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [updateVotesCount()],
     update: [],
     patch: [],
     remove: []

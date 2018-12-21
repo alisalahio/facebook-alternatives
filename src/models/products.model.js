@@ -9,7 +9,7 @@ module.exports = function (app) {
     title: { type: String, required: true },
     url: { type: String, required: true },
     imageUrl: { type: String },
-    votes: { type: Number },
+    votes: { type: Number, default: 0 },
     active: { type: Boolean, default: false },
     categoryId: { type: Schema.Types.ObjectId, ref: 'categories', required: true }
   }, {
