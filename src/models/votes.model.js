@@ -6,13 +6,16 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const votes = new Schema({
-    ip: { type: String, required: true },
+    ip: {
+      type: String,
+      // required: true
+    },
     productId: { type: String, required: true }
   }, {
     timestamps: true
   });
 
-  votes.index({ ip: 1, productId: 1 }, { unique: true });
+  // votes.index({ ip: 1, productId: 1 }, { unique: true });
 
   return mongooseClient.model('votes', votes);
 };
