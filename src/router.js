@@ -9,7 +9,7 @@ Vue.use(Router)
 Vue.use(VueClipboard)
 Vue.use(VTooltip)
 
-export default router = new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -25,3 +25,5 @@ Vue.use(VueAnalytics, {
   id: 'UA-130691181-2',
   router
 })
+
+export default router
