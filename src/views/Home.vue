@@ -94,7 +94,7 @@ export default {
             alt="DELETE Facebook Logo"
             src="../assets/logo.png"
           >
-          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
+          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> .Wiki</h1>
         </div>
       </div>
       <h3 class="text-xl sm:mt-8 sm:mb-10 lg:mb-0 lg:mt-0 lg:w-1/2 mx-1 font-normal text-grey-darkest leading-normal">
@@ -128,8 +128,8 @@ export default {
       :key="category._id"
       class="flex mb-4 sm:flex-col lg:flex-row"
     >
-      <div class="sm:w-full lg:w-1/3 bg-blue-dark h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
-        <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
+      <div class="sm:w-full lg:w-1/3 bg-grey-darker h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
+        <h4 class="align-middle my-auto text-xl pl-4 text-white">{{ category.title }}</h4>
       </div>
       <div class="sm:w-full lg:w-2/3 lg:ml-6 sm:mt-4 md:mt-0 mb-2">
         <a
