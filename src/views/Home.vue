@@ -162,7 +162,7 @@ export default {
         </a>
       </div>
     </div>
-    <footer class="flex flex-col mt-8 mb-20">
+    <footer class="flex flex-col mt-12 sm:mb-20 lg:mb-12">
       <a
         class="text-grey-darker no-underline hover:underline text-sm"
         href="http://iplegalcorner.com/fair-use-of-trademark-for-comment-and-criticism/"
