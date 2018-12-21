@@ -1,6 +1,5 @@
 {
   "host": "server.deletefacebook.wiki",
-  "port": "22",
   "protocal": "https",
   "public": "../public/",
   "paginate": {
