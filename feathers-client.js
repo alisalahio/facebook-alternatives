@@ -4,6 +4,8 @@ import io from 'socket.io-client'
 
 export const host = process.env.SERVER_URL
 
+console.log(host)
+
 const socket = io(host, {
   transports: ['websocket'],
   extraHeaders: {
