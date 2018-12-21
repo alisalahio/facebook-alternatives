@@ -138,7 +138,7 @@ export default {
           :key="product._id"
           :href="product.url"
           target="_blank"
-          class="mb-1 py-2 rounded content-center items-center flex text-lg align-middle pl-2 text-blue-darker hover:bg-grey-light"
+          class="mb-1 py-2 rounded content-center items-center flex text-lg align-middle pl-2 text-blue-darker hover:bg-grey-lighter"
         >
           <img class="w-8 h-8" :src="`${product.imageUrl}`">
           <span class="pl-2 hover:underline flex-1">{{ product.title }}</span>
