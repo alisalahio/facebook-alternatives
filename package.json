@@ -11,13 +11,15 @@
     "@feathersjs/client": "^3.7.6",
     "@feathersjs/feathers": "^3.3.0",
     "@feathersjs/socketio-client": "^1.2.0",
+    "axios": "^0.18.0",
     "feathers-vuex": "^1.6.2",
     "socket.io-client": "^2.2.0",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.5.17",
     "vue-clipboard2": "^0.2.1",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persist": "^2.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",

@@ -1,6 +1,7 @@
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'
 import AddProduct from '@/components/AddProduct'
+import axios from 'axios'
 
 export default {
   name: 'home',
@@ -10,12 +11,14 @@ export default {
   },
 
   data: () => ({
-    isJustCopied: false
+    isJustCopied: false,
+    ip: null
   }),
 
   computed: {
     ...mapGetters('categories', { getCategories: 'find' }),
     ...mapGetters('products', { getProducts: 'find' }),
+    ...mapState('upvotes', ['upvotes']),
     categories() {
       return this.getCategories({
         query: {
@@ -26,18 +29,23 @@ export default {
     }
   },
 
-  created() {
+  mounted() {
     this.findCategories({
       query: {
         $limit: 99
       }
+    })
+    axios.get('https://api.ipify.org/?format=json').then(response => {
+      this.ip = response.data.ip
     })
   },
 
   methods: {
     ...mapActions('categories', { findCategories: 'find' }),
     ...mapActions('products', { findProducts: 'find' }),
+    ...mapActions('votes', { createVote: 'create' }),
     ...mapActions('global', ['showAddProduct', 'hideAddProduct']),
+    ...mapActions('upvotes', ['addUpvote']),
     copy() {
       this.$copyText('https://deletefacebook.wiki/').then(function (e) {
         console.log(e)
@@ -49,6 +57,16 @@ export default {
       setTimeout(() => {
         this.isJustCopied = false
       }, 2500)
+    },
+    upvote(productId) {
+      this.createVote({
+        productId: productId,
+        ip: this.ip
+      })
+      this.addUpvote(productId)
+    },
+    isUpvoted(productId) {
+      return this.upvotes.includes(productId)
     }
   }
 }
@@ -117,10 +135,27 @@ export default {
           :key="product._id"
           :href="product.url"
           target="_blank"
-          class="mb-1 py-2 rounded content-center items-center flex text-lg align-middle hover:underline pl-2 text-blue-darker hover:bg-grey-light"
+          class="mb-1 py-2 rounded content-center items-center flex text-lg align-middle pl-2 text-blue-darker hover:bg-grey-light"
         >
           <img class="w-8 h-8" :src="`${product.imageUrl}`">
-          <span class="pl-2">{{ product.title }}</span>
+          <span class="pl-2 hover:underline flex-1">{{ product.title }}</span>
+          <span
+            v-show="product.votes"
+            class="text-sm text-black pr-2"
+          >
+            {{ product.votes }} pts
+          </span>
+          <button
+            @click.prevent="upvote(product._id)"
+            class="mr-2 rounded-full text-white font-bold py-2 px-3 border-b-4 no-underline"
+            :class="{
+              'bg-green-dark border-green-darker cursor-not-allowed': isUpvoted(product._id),
+              'bg-grey-lighter border-grey-light hover:bg-green-light hover:border-green': isUpvoted(product._id) === false
+            }"
+            :disabled="isUpvoted(product._id)"
+          >
+            👍
+          </button>
         </a>
       </div>
     </div>
