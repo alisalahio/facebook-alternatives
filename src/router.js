@@ -3,10 +3,15 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import VueClipboard from 'vue-clipboard2'
 import VTooltip from 'v-tooltip'
+import VueAnalytics from 'vue-analytics'
 
 Vue.use(Router)
 Vue.use(VueClipboard)
 Vue.use(VTooltip)
+Vue.use(VueAnalytics, {
+  id: 'UA-130691181-2',
+  Router
+})
 
 export default new Router({
   mode: 'history',
