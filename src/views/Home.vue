@@ -86,38 +86,41 @@ export default {
     <add-product
       :categories="categories"
     />
-    <div class="flex flex-col">
-      <div class="flex justify-start items-start">
-        <div class="flex select-none flex-col flex-1">
+    <div class="flex sm:flex-col lg:flex-row lg:mb-16" >
+      <div class="flex justify-start items-start lg:flex-1">
+        <div class="flex select-none flex-col lg:flex-row flex-1">
           <img
             class="w-24 h-24 mr-2 -ml-4"
             alt="DELETE Facebook Logo"
             src="../assets/logo.png"
           >
-          <h1 class="text-3xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
-        </div>
-        <div class="flex flex-col items-end content-end">
-          <a
-            class="uppercase text-blue-dark font-semibold cursor-pointer hover:underline mb-4"
-            @click="copy"
-            v-tooltip.bottom="{
-              content: 'Copied to clipboard!',
-              show: isJustCopied,
-              trigger: 'manual'
-            }"
-          >
-            <span>🔗 Share this</span>
-          </a>
-          <a
-            class="uppercase text-blue-dark font-semibold cursor-pointer hover:underline"
-            @click="showAddProduct"
-          >
-            <span>🤩 Add product</span>
-          </a>
+          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
         </div>
       </div>
-
-      <h3 class="text-xl mt-8 mb-12 mx-1 font-normal text-grey-darkest">You can <a target="_blank" class="text-blue-dark font-bold hover:underline" href="https://twitter.com/hashtag/deletefacebook">#DeleteFacebook</a> easier by using these crowd-sourced alternatives!</h3>
+      <h3 class="text-xl sm:mt-8 sm:mb-10 lg:mb-0 lg:mt-0 lg:w-1/2 mx-1 font-normal text-grey-darkest leading-normal">
+        You can
+        <a target="_blank"
+          class="text-blue-dark font-bold hover:underline cursor-pointer"
+          href="https://twitter.com/hashtag/deletefacebook"
+        >
+          #DeleteFacebook
+        </a>
+        easier by using these crowd-sourced alternatives! You can
+        <a
+          class="text-blue-dark font-bold hover:underline cursor-pointer"
+          @click="copy"
+          v-tooltip.bottom="{
+            content: 'Copied to clipboard!',
+            show: isJustCopied,
+            trigger: 'manual'
+          }"
+        >Share it with a friend 🔗</a>
+        or
+        <a
+          class="text-blue-dark font-bold hover:underline cursor-pointer"
+          @click="showAddProduct"
+        >Add an alternative 🤩</a>
+      </h3>
     </div>
     <div
       v-show="categories.length > 0"
@@ -125,10 +128,10 @@ export default {
       :key="category._id"
       class="flex mb-4 sm:flex-col lg:flex-row"
     >
-      <div class="sm:w-full md:w-full lg:w-1/3 bg-blue-dark h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
+      <div class="sm:w-full lg:w-1/3 bg-blue-dark h-12 flex flex-col justify-center content-center pin-t sticky rounded-lg">
         <h4 class="align-middle my-auto text-xl pl-2 text-white">{{ category.title }}</h4>
       </div>
-      <div class="sm:w-full md:w-full lg:w-2/3 lg:ml-6 sm:mt-4 md:mt-0 mb-2">
+      <div class="sm:w-full lg:w-2/3 lg:ml-6 sm:mt-4 md:mt-0 mb-2">
         <a
           v-show="category.products.data.length > 0"
           v-for="product of category.products.data"
