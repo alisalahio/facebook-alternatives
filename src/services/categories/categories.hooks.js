@@ -4,7 +4,11 @@ const categoryResolvers = {
   joins: {
     products: () => async (category, context) =>
       (category.products = (await context.app.service('products').find({
-        query: { categoryId: category._id }
+        query: {
+          categoryId: category._id,
+          active: true,
+          $sort: { votes: -1 }
+        }
       })))
   }
 };
