@@ -8,7 +8,8 @@ module.exports = function (app) {
   const categories = new Schema({
     title: { type: String, required: true },
     imageUrl: { type: String },
-    color: { type: String }
+    color: { type: String },
+    order: { type: Number }
   }, {
     timestamps: true
   });
