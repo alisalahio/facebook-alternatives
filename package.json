@@ -30,13 +30,17 @@
   },
   "dependencies": {
     "@feathersjs/configuration": "^2.0.4",
-    "@feathersjs/errors": "^3.3.4",
+    "@feathersjs/errors": "^3.3.5",
     "@feathersjs/express": "^1.2.7",
     "@feathersjs/feathers": "^3.2.3",
     "@feathersjs/socketio": "^3.2.7",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
+    "feathers-hooks-common": "^4.19.6",
+    "feathers-mongoose": "^6.3.0",
     "helmet": "^3.15.0",
+    "mongodb-core": "^3.1.9",
+    "mongoose": "^5.4.0",
     "serve-favicon": "^2.5.0",
     "winston": "^3.1.0"
   },
