@@ -15,6 +15,7 @@ export default {
 
   computed: {
     ...mapGetters('categories', { getCategories: 'find' }),
+    ...mapGetters('products', { getProducts: 'find' }),
     categories() {
       return this.getCategories({
         query: {
@@ -34,9 +35,10 @@ export default {
 
   methods: {
     ...mapActions('categories', { findCategories: 'find' }),
+    ...mapActions('products', { findProducts: 'find' }),
     ...mapActions('global', ['showAddProduct', 'hideAddProduct']),
     copy() {
-      this.$copyText('https://quitfacebook.org/').then(function (e) {
+      this.$copyText('https://deletefacebook.wiki/').then(function (e) {
         console.log(e)
       })
       this.activateJustCopied()
@@ -46,7 +48,6 @@ export default {
       setTimeout(() => {
         this.isJustCopied = false
       }, 2500)
-
     }
   }
 }
@@ -61,12 +62,12 @@ export default {
       <div class="flex select-none sm:flex-col md:flex-row">
         <img
           class="sm:w-24 sm:w-24 md:w-32 md:h-32 mr-2"
-          alt="Quit Facebook Logo"
+          alt="DELETE Facebook Logo"
           src="../assets/logo.png"
         >
-        <h1 class="text-5xl text-blue-dark font-black uppercase">Quit <br /> Facebook</h1>
+        <h1 class="text-5xl text-blue-dark font-black uppercase">Delete <br /> Facebook</h1>
       </div>
-      <h3 class="text-lg mt-6 mx-1 text-black">You can quit Facebook easier by using these crowd-sourced alternatives!</h3>
+      <h3 class="text-lg mt-6 mx-1 text-black">You can <a target="_blank" class="text-blue-dark" href="https://twitter.com/hashtag/deletefacebook">#DeleteFacebook</a> easier by using these crowd-sourced alternatives!</h3>
       <div class="my-8 flex sm:flex-col md:flex-row lg:flex-row ">
         <a
           class="mx-1 my-1 uppercase bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-3 px-4 border border-grey rounded shadow cursor-pointer"
@@ -105,20 +106,15 @@ export default {
       </div>
       <div class="sm:w-full md:w-full lg:w-3/4 lg:ml-6">
         <a
-          href="https://spotify.com"
+          v-show="category.products.data.length > 0"
+          v-for="product of category.products.data"
+          :key="product._id"
+          :href="product.url"
           target="_blank"
-          class="mb-4 py-4 rounded content-center items-center flex text-lg align-middle hover:underline pl-2 text-blue-darker bg-grey-lightest hover:bg-grey-lighter"
+          class="mb-4 py-4 rounded content-center items-center flex text-lg align-middle hover:underline pl-2 text-blue-darker hover:bg-grey-light"
         >
-          <img class="w-8 h-8" src="//logo.clearbit.com/spotify.com?size=32">
-          <span class="pl-2">Spotify</span>
-        </a>
-        <a
-          href="https://spotify.com"
-          target="_blank"
-          class="py-4 rounded content-center items-center flex text-lg align-middle my-auto hover:underline pl-2 text-blue-darker bg-grey-lightest hover:bg-grey-lighter"
-        >
-          <img class="w-8 h-8" src="//logo.clearbit.com/spotify.com?size=32">
-          <span class="pl-2">Spotify</span>
+          <img class="w-8 h-8" :src="`${product.imageUrl}?size=48`">
+          <span class="pl-2">{{ product.title }}</span>
         </a>
       </div>
     </div>
