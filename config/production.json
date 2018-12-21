@@ -6,6 +6,5 @@
     "default": 50,
     "max": 500
   },
-  "corsWhitelist": ["https://deletefacebook.wiki"],
   "mongodb": "mongodb://deletefacebook-db:86ac93b25278fb89a9037f386452ba3a@dokku-mongo-deletefacebook-db:27017/deletefacebook-db"
 }
