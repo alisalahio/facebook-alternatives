@@ -86,7 +86,7 @@ export default {
     <add-product
       :categories="categories"
     />
-    <div class="flex sm:flex-col lg:flex-row lg:mb-16" >
+    <div class="flex flex-col" >
       <div class="flex justify-start items-start lg:flex-1">
         <div class="flex select-none flex-col lg:flex-row flex-1">
           <img
@@ -94,18 +94,17 @@ export default {
             alt="DELETE Facebook Logo"
             src="../assets/logo.png"
           >
-          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> .Wiki</h1>
+          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
         </div>
       </div>
-      <h3 class="text-xl sm:mt-8 sm:mb-10 lg:mb-0 lg:mt-0 lg:w-1/2 mx-1 font-normal text-grey-darkest leading-normal">
-        You can
+      <h3 class="text-lg mt-8 mb-10  mx-1 font-normal text-grey-darkest leading-normal">
         <a target="_blank"
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           href="https://twitter.com/hashtag/deletefacebook"
         >
           #DeleteFacebook
         </a>
-        easier by using these crowd-sourced alternatives! You can
+        is now easier by using these products instead! <br />Feel free
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           @click="copy"
