@@ -117,6 +117,7 @@ export default {
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
           href="https://www.producthunt.com/posts/delete-facebook-wiki"
+          target="_blank"
         >😻 We're on Product Hunt!</a>
       </h3>
     </div>
