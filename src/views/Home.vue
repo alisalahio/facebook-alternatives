@@ -116,9 +116,9 @@ export default {
         >🤩 Add an alternative</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
-          href="https://www.producthunt.com/posts/delete-facebook-wiki"
+          href="https://twitter.com/alollou"
           target="_blank"
-        >😻 We're on Product Hunt!</a>
+        >👋 Tweet at me</a>
       </h3>
     </div>
     <div
@@ -175,6 +175,9 @@ export default {
         Alternatives are crowd-sourced and voted-on by site visitors.
       </a>
     </footer>
+    <a href="https://www.producthunt.com/posts/delete-facebook-wiki">
+      <img src="https://ph-files.imgix.net/6bbeab72-7d73-4b84-ac91-64655333295e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=90&h=90&fit=crop&dpr=2" />
+    </a>
   </div>
 </template>
 
