@@ -91,16 +91,13 @@ export default {
     <div class="flex flex-col" >
       <div class="flex justify-start items-start lg:flex-1">
         <div class="flex select-none flex-col lg:flex-row flex-1">
-          <img
-            class="w-24 h-24 mr-2 -ml-4"
-            alt="DELETE Facebook Logo"
-            src="../assets/logo.png"
-          >
-          <h1 class="text-3xl lg:text-2xl text-blue-dark font-black uppercase">Delete <br /> Facebook <br /> Wiki</h1>
+          <a href="https://www.producthunt.com/posts/delete-facebook-wiki">
+            <img src="https://ph-files.imgix.net/6bbeab72-7d73-4b84-ac91-64655333295e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=120&h=120&fit=crop&dpr=2" />
+          </a>
         </div>
       </div>
       <h3 class="text-lg mt-8 mb-10  mx-1 font-normal text-grey-darkest leading-normal">
-        Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
+        <a class="text-black font-bold hover:underline cursor-pointer" href="https://deletefacebook.wiki">Delete Facebook Wiki</a>: Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer pt-2"
           @click="copy"
@@ -175,9 +172,6 @@ export default {
         Alternatives are crowd-sourced and voted-on by site visitors.
       </a>
     </footer>
-    <a href="https://www.producthunt.com/posts/delete-facebook-wiki">
-      <img src="https://ph-files.imgix.net/6bbeab72-7d73-4b84-ac91-64655333295e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=90&h=90&fit=crop&dpr=2" />
-    </a>
   </div>
 </template>
 
