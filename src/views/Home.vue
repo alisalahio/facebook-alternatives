@@ -92,7 +92,7 @@ export default {
       <div class="flex justify-start items-start lg:flex-1">
         <div class="flex select-none flex-col lg:flex-row flex-1">
           <a href="https://www.producthunt.com/posts/delete-facebook-wiki">
-            <img src="https://ph-files.imgix.net/6bbeab72-7d73-4b84-ac91-64655333295e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=90&h=90&fit=crop&dpr=2" />
+            <img src="https://ph-files.imgix.net/6bbeab72-7d73-4b84-ac91-64655333295e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=70&h=70&fit=crop&dpr=2" />
           </a>
         </div>
       </div>
