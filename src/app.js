@@ -33,7 +33,7 @@ app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 app.use('/', express.static(app.get('public')));
 
 // Set up Plugins and providers
-app.configure(express.rest());
+// app.configure(express.rest());
 app.configure(socketio());
 
 app.configure(mongoose);
