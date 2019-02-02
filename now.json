@@ -9,5 +9,8 @@
         "distDir": "dist"
       }
     }
+  ],
+  "alias": [
+    "deletefacebook.wiki"
   ]
 }
