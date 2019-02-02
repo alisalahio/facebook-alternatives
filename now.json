@@ -1,7 +1,13 @@
 {
-    "version": 1,
-    "type": "static",
-    "alias": [
-      "deletefacebook.wiki"
-    ]
-  }
+  "version": 2,
+  "name": "quitfacebook",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ]
+}
