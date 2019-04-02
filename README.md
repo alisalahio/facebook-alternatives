@@ -5,9 +5,7 @@ Categorized FB Alternatives and anonymous upvoting using Nuxt (Vue), Feathers.js
 
 ~~~~
 cd server
-
 npm install
-
 npm run dev
 ~~~~
 
@@ -15,8 +13,6 @@ npm run dev
 
 ~~~~
 cd client
-
 npm install
-
 npm run serve
 ~~~~
