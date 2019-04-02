@@ -3,16 +3,20 @@ Categorized FB Alternatives and anonymous upvoting using Nuxt (Vue), Feathers.js
 
 # Server Setup
 
-`cd server`
+~~~~
+cd server
 
-`npm install`
+npm install
 
-`npm run dev`
+npm run dev
+~~~~
 
 # Client Setup
 
-`cd client`
+~~~~
+cd client
 
-`npm install`
+npm install
 
-`npm run serve`
+npm run serve
+~~~~
