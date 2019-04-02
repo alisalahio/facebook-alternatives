@@ -1,0 +1,11 @@
+{
+  "host": "server.deletefacebook.wiki",
+  "port": "5000",
+  "protocal": "https",
+  "public": "../public/",
+  "paginate": {
+    "default": 50,
+    "max": 500
+  },
+  "mongodb": "mongodb://ali:iaB5tisf7nt3RwA@ds151994.mlab.com:51994/deletefacebook-db"
+}
