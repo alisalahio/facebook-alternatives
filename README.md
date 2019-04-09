@@ -1,6 +1,8 @@
 # facebook-alternatives
 Categorized FB Alternatives and anonymous upvoting using Nuxt (Vue), Feathers.js, MongoDB
 
+Demo: https://deletefacebook.wiki
+
 # Server Setup
 
 ~~~~
