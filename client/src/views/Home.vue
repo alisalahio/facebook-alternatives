@@ -82,7 +82,7 @@ export default {
       class="border-t border-l border-left border-grey rounded pin-b pin-r fixed flex items-center p-2 bg-white z-50"
     >
       <span class="text-blue-dark px-2">by </span>
-      <img class="w-6 h-6 rounded-full" src="https://pbs.twimg.com/profile_images/1073368061183516672/tcWzTTZw_400x400.jpg">
+      <img class="w-6 h-6 rounded-full" src="https://user-images.githubusercontent.com/1072229/56968822-24370d00-6b64-11e9-9d35-bd82a8e93f25.jpg">
       <span class="text-blue-dark px-2">@alollou</span>
     </a>
     <add-product
