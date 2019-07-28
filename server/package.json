@@ -1,8 +1,8 @@
 {
-  "name": "quitfacebook-server",
+  "name": "facebook-alternatives-server",
   "description": "",
   "version": "0.0.0",
-  "homepage": "",
+  "homepage": "https://github.com/alisalahio/facebook-alternatives",
   "main": "src",
   "keywords": [
     "feathers"
