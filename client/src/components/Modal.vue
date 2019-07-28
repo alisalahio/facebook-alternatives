@@ -5,7 +5,7 @@ export default {
   name: 'Modal',
 
   data: () => ({
-    modal: false
+    isModal: false
   })
 }
 </script>
@@ -13,7 +13,7 @@ export default {
 <template>
   <transition name="modal">
     <div
-      v-show="modal"
+      v-show="isModal"
       class="modal-mask"
     >
       <div class="modal-wrapper">

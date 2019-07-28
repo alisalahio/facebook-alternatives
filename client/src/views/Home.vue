@@ -19,6 +19,7 @@ export default {
     ...mapGetters('categories', { getCategories: 'find' }),
     ...mapGetters('products', { getProducts: 'find' }),
     ...mapState('upvotes', ['upvotes']),
+
     categories() {
       return this.getCategories({
         query: {
@@ -31,9 +32,7 @@ export default {
 
   mounted() {
     this.findCategories({
-      query: {
-        $limit: 99
-      }
+      query: { $limit: 99 }
     })
   },
 
@@ -43,22 +42,24 @@ export default {
     ...mapActions('votes', { createVote: 'create' }),
     ...mapActions('global', ['showAddProduct', 'hideAddProduct']),
     ...mapActions('upvotes', ['addUpvote']),
-    copy() {
-      this.$copyText('https://deletefacebook.wiki/').then(function (e) {
-        console.log(e)
-      })
+
+    copyUrl() {
+      this.$copyText('https://deletefacebook.wiki/')
       this.activateJustCopied()
     },
+
     activateJustCopied() {
       this.isJustCopied = true
       setTimeout(() => {
         this.isJustCopied = false
       }, 2500)
     },
+
     async getIP() {
       var response = await axios.get('https://api.ipify.org/?format=json')
       return response.data.ip
     },
+
     async upvote(productId) {
       this.ip = await this.getIP()
       this.createVote({
@@ -67,6 +68,7 @@ export default {
       })
       this.addUpvote(productId)
     },
+
     isUpvoted(productId) {
       return this.upvotes.includes(productId)
     }
@@ -77,13 +79,13 @@ export default {
 <template>
   <div class="home my-6 container mx-auto">
     <a
-      href="https://twitter.com/alollou"
+      href="https://twitter.com/alisalahio"
       target="_blank"
       class="border-t border-l border-left border-grey rounded pin-b pin-r fixed flex items-center p-2 bg-white z-50"
     >
       <span class="text-blue-dark px-2">by </span>
       <img class="w-6 h-6 rounded-full" src="https://user-images.githubusercontent.com/1072229/56968822-24370d00-6b64-11e9-9d35-bd82a8e93f25.jpg">
-      <span class="text-blue-dark px-2">@alollou</span>
+      <span class="text-blue-dark px-2">Ali Salah</span>
     </a>
     <add-product
       :categories="categories"
@@ -100,7 +102,7 @@ export default {
         <a class="text-black font-bold hover:underline cursor-pointer" href="https://deletefacebook.wiki">Delete Facebook Wiki</a>: Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer pt-2"
-          @click="copy"
+          @click="copyUrl"
           v-tooltip.bottom="{
             content: 'Copied to clipboard!',
             show: isJustCopied,
@@ -113,7 +115,7 @@ export default {
         >🤩 Add an alternative</a> <br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer"
-          href="https://twitter.com/alollou"
+          href="https://twitter.com/alisalahio"
           target="_blank"
         >👋 Tweet at me</a>
       </h3>

@@ -39,38 +39,41 @@ export default {
         url: this.url,
         categoryId: this.categoryId
       }
-    }
-
+    },
   },
 
   methods: {
     ...mapActions('global', ['showAddProduct', 'hideAddProduct']),
     ...mapActions('products', ['create']),
+
     isUrl(val) {
       var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
       return regexp.test(val)
     },
-    validate() {
-      if (this.url === '' || this.title === '' || this.categoryId === undefined || this.categoryId === 'default') {
-        return false
-      }
+
+    isValid() {
+      const requiredFieldMissing =
+        this.url === '' ||
+        this.title === '' ||
+        typeof this.categoryId === 'undefined' ||
+        this.categoryId === 'default'
+
+      if (requiredFieldMissing) return false
       return true
     },
+
     submit() {
-      if (this.validate()) {
-        console.log(this.categoryId)
-        this.create({
-          title: this.title,
-          url: this.url,
-          categoryId: this.categoryId
-        })
-        alert('Submitted successfully, thanks for contributing 🤩')
-        this.hideAddProduct()
-      }
-    }
+      if (this.isValid() === false) return
 
+      this.create({
+        title: this.title,
+        url: this.url,
+        categoryId: this.categoryId
+      })
+      alert('Submitted successfully, thanks for contributing 🤩')
+      this.hideAddProduct()
+    },
   }
-
 }
 </script>
 
