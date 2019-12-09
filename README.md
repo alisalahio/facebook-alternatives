@@ -1,3 +1,11 @@
+### 🙋🏻‍♂️ Made by [@alisalahio](https://twitter.com/alisalahio)  
+
+### Other projects:
+- 🙀 [Sup](https://supstatus.com) - The status page for your startup.
+- 🤓 [Sipreads](https://sipreads.com) - Takaways from the best nonfiction books.
+--- 
+
+
 # facebook-alternatives
 Categorized FB Alternatives and anonymous upvoting using Nuxt (Vue), Feathers.js, MongoDB & Tailwind CSS
 
