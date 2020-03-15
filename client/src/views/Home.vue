@@ -44,7 +44,7 @@ export default {
     ...mapActions('upvotes', ['addUpvote']),
 
     copyUrl() {
-      this.$copyText('https://deletefacebook.wiki/')
+      this.$copyText('https://facebook-alternatives.salah.io/')
       this.activateJustCopied()
     },
 
@@ -99,7 +99,7 @@ export default {
         </div>
       </div>
       <h3 class="text-lg mt-8 mb-10  mx-1 font-normal text-grey-darkest leading-normal">
-        <a class="text-black font-bold hover:underline cursor-pointer" href="https://deletefacebook.wiki">Delete Facebook Wiki</a>: Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
+        <a class="text-black font-bold hover:underline cursor-pointer" href="https://facebook-alternatives.salah.io">Delete Facebook Wiki</a>: Getting rid of Facebook is now easier, check-out these alternative products! <br /><br />
         <a
           class="text-blue-dark font-bold hover:underline cursor-pointer pt-2"
           @click="copyUrl"
